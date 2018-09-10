@@ -6,6 +6,9 @@ import animateSearch from './views/animate.vue'
 import renderDemo from './views/render.vue'
 import circleCss3 from './views/circle.vue'
 import circleSvg from './views/circle-svg.vue'
+import timeLine from './views/animate-time-line.vue'
+import newFunction from './views/new-function.vue'
+import animateLine from './views/animate-line.vue'
 
 Vue.use(Router)
 
@@ -37,6 +40,18 @@ export default new Router({
             path: '/circleSvg',
             name: 'circleSvg',
             component: circleSvg
+        }, {
+            path: '/timeLine',
+            name: 'timeLine',
+            component: timeLine
+        }, {
+            path: '/newFunction',
+            name: 'newFunction',
+            component: newFunction
+        }, {
+            path: '/animateLine',
+            name: 'animateLine',
+            component: animateLine
         }
     ]
 })

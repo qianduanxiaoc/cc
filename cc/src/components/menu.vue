@@ -38,6 +38,18 @@
                     {
                         name: 'circleSvg',
                         title: '进度环-svg'
+                    },
+                    {
+                        name: 'timeLine',
+                        title: '时间轴动画'
+                    },
+                    {
+                        name: 'newFunction',
+                        title: 'new实例'
+                    },
+                    {
+                        name: 'animateLine',
+                        title: '蚂蚁线'
                     }
                 ]
             }

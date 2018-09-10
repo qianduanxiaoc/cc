@@ -4,16 +4,20 @@
             <menu-list></menu-list>
         </div>
         <div class="content">
-
-        <div class="btn">
-            <span @click="add">+</span>{{percent}}<span @click="del">-</span>
-        </div>
-            <div>
-                <circle-demo :percent="percent" :size="120" :trailWidth="30" :strokeWidth="30"></circle-demo>
-            </div>
-            <div>
-                <circle-demo :percent="percent" :size="360" :trailWidth="30" :strokeWidth="30"></circle-demo>
-            </div>
+            <span @click="add">+</span>{{percent}}
+            <span @click="del">-</span>
+            <circle-demo
+                :percent="percent"
+                :size="size"
+                :strokeLinecap="strokeLinecap"
+                :strokeWidth="strokeWidth"
+                :strokeColor="strokeColor"
+                :trailWidth="trailWidth"
+                :trailColor="trailColor"
+                :trailBgc="trailBgc"
+                :dashboard="dashboard"
+            >
+            </circle-demo>
             <router-view></router-view>
         </div>
     </div>
@@ -30,11 +34,17 @@ export default {
     },
     data() {
         return {
+            step: 10,
             percent: 0,
-            step: 10
+            size: 120,
+            strokeLinecap: 'butt',
+            strokeWidth: 20,
+            strokeColor: '#0bb27a',
+            trailBgc: 'transparent',
+            trailColor: '#e1e6eb',
+            trailWidth: 20,
+            dashboard: true
         }
-    },
-    computed: {
     },
     methods: {
         add() {
