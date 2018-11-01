@@ -50,6 +50,14 @@
                     {
                         name: 'animateLine',
                         title: '蚂蚁线'
+                    },
+                    {
+                        name: 'game',
+                        title: 'game'
+                    },
+                    {
+                        name: 'work',
+                        title: 'work'
                     }
                 ]
             }
