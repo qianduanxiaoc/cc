@@ -58,6 +58,26 @@
                     {
                         name: 'work',
                         title: 'work'
+                    },
+                    {
+                        name: 'requestAnimateFrame',
+                        title: 'requestAnimateFrame'
+                    },
+                    {
+                        name: 'closed',
+                        title: 'closed'
+                    },
+                    {
+                        name: 'cssShapes',
+                        title: 'cssShapes'
+                    },
+                    {
+                        name: 'objectObserve',
+                        title: 'objectObserve'
+                    },
+                    {
+                        name: 'fixTable',
+                        title: 'fixTable'
                     }
                 ]
             }

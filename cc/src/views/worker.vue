@@ -1,14 +1,18 @@
 <template>
     <div>
-        work  {{num}}{{error}}<br/><br/>
+   <!--      work  {{num}}{{error}}<br/><br/>
 
         主线程{{count}}<br/><br/>
         <input type="text" :style="{display: display}"><br/><br/>
-
+        <p id="test">11</p>
         <span @click="timedCount">主线程开始</span><br/><br/>
         <span @click="toggle">隐藏、显示输入框</span><br/><br/>
         <span @click="startWorker">work开始</span><br/><br/>
-        <span @click="stopWorker">结束</span>
+        <span @click="stopWorker">结束</span> -->
+        <span>生成png</span>
+        <br/>
+        <br/>
+        <img src="./images/4.jpg" alt="" :class="s.img">
     </div>
 </template>
 <script>
@@ -49,11 +53,13 @@
                 console.log('111111111111111111111111111111111')
             }
         },
-        created() {
-
+        mounted() {
+            document.getElementById('test')
         }
     }
 </script>
 <style module="s">
-     
+     .img {
+        width: 1000px;
+     }
 </style>

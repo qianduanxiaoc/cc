@@ -11,6 +11,11 @@ import newFunction from './views/new-function.vue'
 import animateLine from './views/animate-line.vue'
 import game from './views/game.vue'
 import work from './views/worker.vue'
+import requestAnimateFrame from './views/request-animate-frame.vue'
+import closed from './views/closed.vue'
+import cssShapes from './views/css-shapes.vue'
+import objectObserve from './views/object_observe.vue'
+import fixTable from './views/fix-table.vue'
 
 Vue.use(Router)
 
@@ -62,6 +67,26 @@ export default new Router({
             path: '/work',
             name: 'work',
             component: work
+        }, {
+            path: '/request-animate-frame',
+            name: 'requestAnimateFrame',
+            component: requestAnimateFrame
+        }, {
+            path: '/closed',
+            name: 'closed',
+            component: closed
+        }, {
+            path: '/css-shapes',
+            name: 'cssShapes',
+            component: cssShapes
+        }, {
+            path: '/object-observe',
+            name: 'objectObserve',
+            component: objectObserve
+        }, {
+            path: '/fix-table',
+            name: 'fixTable',
+            component: fixTable
         }
     ]
 })
