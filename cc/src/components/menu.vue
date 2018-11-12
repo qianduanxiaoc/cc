@@ -78,6 +78,18 @@
                     {
                         name: 'fixTable',
                         title: 'fixTable'
+                    },
+                    {
+                        name: 'jsTypeof',
+                        title: 'jsTypeof'
+                    },
+                    {
+                        name: 'jsJsonFormal',
+                        title: 'jsJsonFormal'
+                    },
+                    {
+                        name: 'jsCreateObj',
+                        title: 'jsCreateObj'
                     }
                 ]
             }

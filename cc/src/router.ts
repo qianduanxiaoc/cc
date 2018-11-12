@@ -16,6 +16,9 @@ import closed from './views/closed.vue'
 import cssShapes from './views/css-shapes.vue'
 import objectObserve from './views/object_observe.vue'
 import fixTable from './views/fix-table.vue'
+import jsTypeof from './views/js/js-typeof-instanceof.vue'
+import jsJsonFormal from './views/js/js-json-formal.vue'
+import jsCreateObj from './views/js/js-create-obj.vue'
 
 Vue.use(Router)
 
@@ -87,6 +90,18 @@ export default new Router({
             path: '/fix-table',
             name: 'fixTable',
             component: fixTable
+        }, {
+            path: '/js-typeof',
+            name: 'jsTypeof',
+            component: jsTypeof
+        }, {
+            path: '/js-json-formal',
+            name: 'jsJsonFormal',
+            component: jsJsonFormal
+        }, {
+            path: '/js-create-obj',
+            name: 'jsCreateObj',
+            component: jsCreateObj
         }
     ]
 })
