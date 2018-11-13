@@ -90,6 +90,10 @@
                     {
                         name: 'jsCreateObj',
                         title: 'jsCreateObj'
+                    },
+                    {
+                        name: 'vueDirective',
+                        title: 'vueDirective'
                     }
                 ]
             }

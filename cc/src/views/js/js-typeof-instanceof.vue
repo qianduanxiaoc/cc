@@ -48,7 +48,7 @@
                 arr: [1,2]
             }
             //instanceof(object, constructor)
-            //instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上
+            //instanceof 运算符用来检测 object 的原型链上是否存在 constructor
             for(let item in instance) {
                 console.log(`${item}的instanceof值：`, instance[item] instanceof Array)
             }

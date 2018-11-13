@@ -19,6 +19,7 @@ import fixTable from './views/fix-table.vue'
 import jsTypeof from './views/js/js-typeof-instanceof.vue'
 import jsJsonFormal from './views/js/js-json-formal.vue'
 import jsCreateObj from './views/js/js-create-obj.vue'
+import vueDirective from './views/vue-directive.vue'
 
 Vue.use(Router)
 
@@ -102,6 +103,10 @@ export default new Router({
             path: '/js-create-obj',
             name: 'jsCreateObj',
             component: jsCreateObj
+        }, {
+            path: '/vue-directive',
+            name: 'vueDirective',
+            component: vueDirective
         }
     ]
 })
