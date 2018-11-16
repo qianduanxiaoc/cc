@@ -19,7 +19,9 @@ import fixTable from './views/fix-table.vue'
 import jsTypeof from './views/js/js-typeof-instanceof.vue'
 import jsJsonFormal from './views/js/js-json-formal.vue'
 import jsCreateObj from './views/js/js-create-obj.vue'
+import jsFunction from './views/js/js-function.vue'
 import vueDirective from './views/vue-directive.vue'
+import myQuestion from './views/my-question.vue'
 
 Vue.use(Router)
 
@@ -27,6 +29,11 @@ export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
+        {
+            path: '/my-question',
+            name: 'myQuestion',
+            component: myQuestion
+        },
         {
             path: '/intersectionObserver',
             name: 'intersectionObserver',
@@ -103,6 +110,10 @@ export default new Router({
             path: '/js-create-obj',
             name: 'jsCreateObj',
             component: jsCreateObj
+        }, {
+            path: '/js-function',
+            name: 'jsFunction',
+            component: jsFunction
         }, {
             path: '/vue-directive',
             name: 'vueDirective',

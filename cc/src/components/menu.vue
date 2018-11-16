@@ -16,6 +16,10 @@
             return {
                 menuList: [
                     {
+                        name: 'myQuestion',
+                        title: '问题'
+                    },
+                    {
                         name: 'intersectionObserver',
                         title: '无限滚动'
                     },
@@ -90,6 +94,10 @@
                     {
                         name: 'jsCreateObj',
                         title: 'jsCreateObj'
+                    },
+                    {
+                        name: 'jsFunction',
+                        title: 'jsFunction'
                     },
                     {
                         name: 'vueDirective',
