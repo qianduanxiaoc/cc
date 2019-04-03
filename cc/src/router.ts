@@ -22,6 +22,7 @@ import jsCreateObj from './views/js/js-create-obj.vue'
 import jsFunction from './views/js/js-function.vue'
 import vueDirective from './views/vue-directive.vue'
 import myQuestion from './views/my-question.vue'
+import clipPath from './views/clip-path.vue'
 
 Vue.use(Router)
 
@@ -118,6 +119,10 @@ export default new Router({
             path: '/vue-directive',
             name: 'vueDirective',
             component: vueDirective
+        }, {
+            path: '/clip-path',
+            name: 'clipPath',
+            component: clipPath
         }
     ]
 })

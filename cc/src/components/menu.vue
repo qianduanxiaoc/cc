@@ -102,6 +102,10 @@
                     {
                         name: 'vueDirective',
                         title: 'vueDirective'
+                    },
+                    {
+                        name: 'clipPath',
+                        title: 'clipPath'
                     }
                 ]
             }
