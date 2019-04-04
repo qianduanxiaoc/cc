@@ -1,12 +1,12 @@
 <template>
     <div class="main">
-        <div :class="['block', [i]]" :style="getStyle(data, i)" v-for="(data, i) in mapObj.names" @mouseover="mouseover($event, data, i)"></div>
+        <div :class="['block', [i]]" :style="getStyle(data, i)" v-for="(data, i) in mapObj.names" @mousemove="mousemove($event, data, i)" @mouseout="mouseout"></div>
         <svg width="0" height="0" v-for="(data, i) in mapObj.shapes">
             <clipPath :id="i">
                 <path :d="data" fill="#436379" p-id="6487"></path>
             </clipPath>
         </svg>
-        <div class="detail" :style="{left: `${mousePos.x}px`, top: `${mousePos.y}px`}"  >
+        <div class="detail" :style="{left: `${mousePos.x}px`, top: `${mousePos.y}px`}" v-show="mousePos.show">
             {{mousePos.data.name}}
         </div>
     </div>
@@ -18,6 +18,7 @@
         data() {
             return {
                 mousePos: {
+                    show: false,
                     x: 0,
                     y: 0,
                     data: {}
@@ -34,12 +35,16 @@
                     clipPath: `url(#${i})`
                 }
             },
-            mouseover(event, data, i) {
+            mousemove(event, data, i) {
                 this.mousePos = {
-                    x: event.x,
-                    y: event.y,
+                    show: true,
+                    x: event.x - 30,
+                    y: event.y - 30,
                     data: data
                 }
+            },
+            mouseout() {
+                this.mousePos.show = false
             }
         }
     }
