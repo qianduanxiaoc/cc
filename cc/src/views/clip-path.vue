@@ -1,13 +1,14 @@
 <template>
     <div class="main">
-        <div :class="['block', [i]]" :style="getStyle(data, i)" v-for="(data, i) in mapObj.names">
-            <span class="pop" :style="{left: `${data.x}px`, top: `${data.y}px`}">{{i}}</span>
-        </div>
+        <div :class="['block', [i]]" :style="getStyle(data, i)" v-for="(data, i) in mapObj.names" @mouseover="mouseover($event, data, i)"></div>
         <svg width="0" height="0" v-for="(data, i) in mapObj.shapes">
             <clipPath :id="i">
                 <path :d="data" fill="#436379" p-id="6487"></path>
             </clipPath>
         </svg>
+        <div class="detail" :style="{left: `${mousePos.x}px`, top: `${mousePos.y}px`}"  >
+            {{mousePos.data.name}}
+        </div>
     </div>
 </template>
 <script>
@@ -16,6 +17,11 @@
         components: {},
         data() {
             return {
+                mousePos: {
+                    x: 0,
+                    y: 0,
+                    data: {}
+                },
                 mapObj: map
             }
         },
@@ -26,6 +32,13 @@
                 return {
                     background: `#${config.color}`,
                     clipPath: `url(#${i})`
+                }
+            },
+            mouseover(event, data, i) {
+                this.mousePos = {
+                    x: event.x,
+                    y: event.y,
+                    data: data
                 }
             }
         }
@@ -66,6 +79,11 @@
         $hongkong: #a3d0f8;
         $taiwan: #ffe7b8;
         $macau: #a3d0f8;
+    
+    .detail {
+        position: fixed;
+    }
+
     .icon {
        width: 1em; height: 1em;
        vertical-align: -0.15em;
@@ -96,12 +114,12 @@
                 background: darken($heilongjiang, 10%) !important;
             }
         }
-        .jilin { 
+        .jilin {
             &:hover {
                 background: darken($jilin, 10%) !important;
             }
         }
-        .liaoning { 
+        .liaoning {
             &:hover {
                 background: darken($liaoning, 10%) !important;
             }
